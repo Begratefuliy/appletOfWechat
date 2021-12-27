@@ -1,0 +1,43 @@
+<view class="container">
+  <form>
+    <form bindsubmit="submit">
+      <view class="reg_name _common">
+        <view class="word">
+          <text class="red">*</text><text>真实姓名</text>
+        </view>
+        <input type="text" name="name" value="{{ user_info.uname }}" disabled="true"/>
+      </view>
+      <view class="reg_qq _common">
+        <view class="word">
+          <text class="red">*</text><text>QQ</text>
+        </view>
+        <input type="number" name="qq" value="{{ user_info.qq }}" disabled="true"/>
+      </view>
+      <view class="reg_wx _common">
+        <view class="word">
+          <text class="red">*</text><text>微信</text>
+        </view>
+        <input type="text" name="wx" value="{{  user_info.wx }}" disabled="true"/>
+      </view>
+      <view class="reg_school _common">
+        <view class="word">
+          <text>所在学校</text>
+        </view>
+        <input type="text" name="school" value="{{ complete_information.school }}"/>
+      </view>
+      <view class="reg_学号 _common">
+        <view class="word">
+          <text>学号</text>
+        </view>
+        <input type="number" name="xuehao" value="{{ complete_information.xuehao }}"/>
+      </view>
+      <view class="reg_class _common">
+        <view class="word">
+          <text>班级</text>
+        </view>
+        <input type="text" name="class" value="{{ complete_information.class }}"/>
+      </view>
+      <button form-type="submit" bindtap="information_submit">确认</button>
+    </form>
+  </form>
+</view>

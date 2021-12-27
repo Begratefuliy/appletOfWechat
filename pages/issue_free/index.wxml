@@ -1,0 +1,51 @@
+<view class="container">
+  <form bindsubmit="submit">
+    <view class="goods_name common">
+      <view class="word">
+        <text class="red">*</text><text>物品名称</text>
+      </view>
+      <input type="text" name="name" placeholder="如蓝牙鼠标，填鼠标"/>
+    </view>
+    <view class="goods_title common">
+      <view class="word">
+        <text class="red">*</text><text>标题</text>
+      </view>
+      <input type="text" name="title" placeholder="请输入"/>
+    </view>
+    <view class="goods_institute common">
+      <view class="word">
+        <text class="red">*</text><text>学院</text>
+      </view>
+      <input type="text" name="institute" placeholder="请输入"/>
+    </view>
+    <view class="goods_des common">
+      <view class="word">
+        <text class="red">*</text><text>物品描述</text>
+      </view>
+      <textarea cols="20" rows="5" name="des" placeholder="请输入"></textarea>
+    </view>
+    <view class="goods_address common">
+      <view class="word">
+        <text class="red">*</text><text>交易地址</text>
+      </view>
+      <input type="text" name="address" placeholder="请输入"/>
+    </view>
+    <view class="showCamera">
+      <view class="figure" bindtap="gotoShow">
+        <view class="word">
+          <text class="red">*</text><text>附图</text>
+        </view>
+        <view class="icon">
+          <image src="../../icons/camera.png"></image>
+        </view>
+      </view>
+      <view class="{{src.length > 3 ? '.show_content_2' : '.show_content_1'}}" wx:if="{{isShow}}">
+        <view class="show_img" wx:for="{{src}}" wx:key="scr">
+          <image mode="aspectFitf" src="{{src[index]}}"></image>
+          <icon type="clear" size="23" color="red" data-index="{{index}}" bindtap="delete"></icon>
+        </view>
+      </view>
+    </view>
+    <button form-type="submit" bindtap="camera_submit">提交</button>
+  </form>
+</view>

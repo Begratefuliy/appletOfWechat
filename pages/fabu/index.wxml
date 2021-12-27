@@ -1,0 +1,26 @@
+<!--pages/fabu/index.wxml-->
+<view class="content">
+  <view class="leave_issue common" bindtap="goToLeaveIssue">
+    <view class="icon">
+      <image src="../../icons/issue_leave.png"></image>
+    </view>
+    <text>发布闲置商品</text>
+  </view>
+  <view class="free_issue common" bindtap="goToFreeIssueIssue">
+    <view class="icon">
+      <image src="../../icons/issue_free.png"></image>
+    </view>
+    <text>发布免费商品</text>
+  </view>
+  <navigator url="/pages/administration_login/index" wx:if="{{isRegister === 1}}">
+    <view class="manage_entrance common">
+      <view class="icon">
+        <image src="../../icons/ad.png"></image>
+      </view>
+      <text>管理员入口</text>
+    </view>
+  </navigator>
+  <view class="word">
+    <text>----西邮二手信息交易平台----</text>
+  </view>
+</view>

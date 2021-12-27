@@ -1,0 +1,54 @@
+<view class="search">
+  <form bindsubmit="submit">
+    <input type="text" class="search_input" placeholder="请输入搜索关键字" name="text"/>
+    <button size="mini" form-type="submit">搜索</button>
+  </form>
+</view>
+<view class="hot_search">
+  <view class="title">
+    <image src="../../icons/hot.png"></image>
+    <text>热门搜索</text>
+  </view>
+  <view class="hot_content">
+    <view class="item">
+      <text bindtap="hotClick" data-text="电动车">电动车</text>
+    </view>
+    <view class="item">
+      <text bindtap="hotClick" data-text="篮球">篮球</text>
+    </view>
+    <view class="item">
+      <text bindtap="hotClick" data-text="手机">手机</text>
+    </view>
+    <view class="item">
+      <text bindtap="hotClick" data-text="书籍">书籍</text>
+    </view>
+    <view class="item">
+      <text bindtap="hotClick" data-text="充电宝">充电宝</text>
+    </view>
+    <view class="item">
+      <text bindtap="hotClick" data-text="平板">平板</text>
+    </view>
+    <view class="item">
+      <text bindtap="hotClick" data-text="鼠标">鼠标</text>
+    </view>
+  </view>
+</view>
+<view class="search_content">
+  <view class="search_Item" wx:for="{{goodSimpleInfo}}" wx:key="{{item.gid}}" bindtap="toDetail" data-gid="{{item.gid}}">
+    <view class="img">
+      <image src="{{item.homeImage}}"></image>
+    </view>
+    <view class="product_des">
+      <text class="title">【{{item.goodsName}}】{{item.goodsTitle}}</text>
+      <text class="description">{{item.goodsDec}}</text>
+    </view>
+    <view class="price">
+      <text class="price_new">￥{{item.goodsPriceNew}}</text>
+      <text class="price_old">￥{{item.goodsPriceOld}}</text>
+    </view>
+    <view class="category">类别:
+      <text class="_content" wx:if="{{item.goodsPriceNew == 0}}">免费</text>
+      <text class="_content" wx:else>二手</text>
+    </view>
+  </view>
+</view>

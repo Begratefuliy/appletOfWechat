@@ -1,0 +1,54 @@
+<view class="container">
+  <view class="comment_main">
+    <view class="comment_infor">
+      <view class="img" bindtap="goToUserDetail" data-openid="{{allCommentInfo.fromOpenid}}">
+        <image class="user_img" src="{{allCommentInfo.fromAvatar}}"></image>
+        <image class="iden_img" src="../../icons/renzheng_o.png" wx:if="{{allCommentInfo.userState != 0}}"></image>
+      </view>
+      <view class="comment_name">
+        <text>{{allCommentInfo.fromName}}</text>
+      </view>
+      <view class="comment_time">
+        <text>{{allCommentInfo.createTime}}</text>
+      </view>
+    </view>
+    <view class="comment_content">
+      <text>{{allCommentInfo.content}}</text>
+    </view>
+  </view>
+  <view class="blank"></view>
+  <view class="reply_count">
+    <text>相关回复共{{allCommentInfo.commentsReplies.length}}条</text>
+  </view>
+  <view class="comment_vice" wx:for="{{allCommentInfo.commentsReplies}}" wx:key="{{item.commentId}}">
+    <view class="comment_infor">
+      <view class="img" bindtap="goToUserDetail" data-openid="{{item.fromOpenid}}">
+        <image class="user_img" src="{{item.fromAvatar}}"></image>
+        <image class="iden_img" src="../../icons/renzheng_o.png" wx:if="{{item.userState != 0}}"></image>
+      </view>
+      <view class="comment_name">
+        <text>{{item.fromName}}</text>
+      </view>
+      <view class="comment_time">
+        <text>{{item.createTime}}</text>
+      </view>
+    </view>
+    <view class="comment_content">
+      <view class="float" align="center">
+        <view class="by_reply">
+          <text>回复</text>
+          <text class="name" bindtap="goToUserDetail" data-openid="{{item.toOpenid}}">{{item.toName}}：</text>
+        </view>
+      </view>
+      <text
+        class="reply_content">{{item.content}}</text>
+    </view>
+  </view>
+</view>
+<view class="comment_input">
+  <form bindsubmit="submit_vice">
+    <textarea type="text" placeholder="请输入评论内容" bindblur="hideInput"
+      bindfocus="getHeight" name="comment" confirm-hold="true" show-confirm-bar="{{false}}" style="overflow:hidden" value="{{textareaValue}}"></textarea>
+    <button size="mini" form-type="submit">发布</button>
+  </form>
+</view>

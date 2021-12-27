@@ -1,0 +1,55 @@
+@import "../../style/iconfont";
+page{
+  background-color: rgba(237, 237, 237, 255);
+}
+.container{
+  position: relative;
+  top: 0;
+  overflow-x: hidden;
+  width: 100%;
+  height: calc(100vh - 80rpx);
+}
+.fa-box{
+  position: relative;
+}
+.pic{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.others{
+  margin: 50rpx 10rpx 0 30rpx;
+  width: 75%;
+  font-size: 35rpx;
+  line-height: 2rem;
+}
+.talking{
+  width: 70%;
+  margin: -100rpx 0rpx 50rpx 130rpx;
+  background-color: #ffffff;
+  padding: 20rpx 25rpx;
+  border-radius: 0.5rem;
+  overflow-wrap: break-word;
+}
+.user{
+  margin: 80rpx 10rpx 0 175rpx;
+  width: 75%;
+  font-size: 35rpx;
+  line-height: 2rem;
+}
+.pic-user{
+  position: absolute;
+  right: 30rpx;
+}
+.user-talk{
+  width: 70%;
+  background-color: rgba(214,214,214);
+  margin: 0 100rpx 30rpx 0;
+  overflow-wrap: break-word;
+}
+.tabs{
+  width: 100%;
+  height: 80rpx;
+  position: fixed;
+  bottom: 10rpx;
+}

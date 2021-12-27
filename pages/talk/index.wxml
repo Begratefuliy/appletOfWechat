@@ -1,0 +1,20 @@
+<!--pages/talk/talk.wxml-->
+<view class="container">
+  <scroll-view scroll-into-view='{{toView}}'>
+    <view class="fa-box" wx:for="{{chatContent}}" wx:key="{{item.from}}" id='msg-{{index}}'>
+      <view class="others" wx:if="{{item.from == 0}}">
+        <image class="pic pic-others" src="{{fromAvatarUrl}}"></image>
+        <view class="talking" hover-class="none" hover-stop-propagation="false">
+          <text>{{item.content}}</text>
+        </view>
+      </view>
+      <view class="user" wx:else>
+        <image class="pic pic-user" src="{{avatarUrl}}"></image>
+        <view class="talking user-talk" hover-class="none" hover-stop-propagation="false">
+          <text>{{item.content}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<Tabs class="tabs" bind:sendTab="sendTab" blankInputValue="{{blankInputValue}}"></Tabs>

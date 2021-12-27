@@ -1,0 +1,6 @@
+<view class="bottom">
+  <view class="text">
+    <input type="text" bindinput="bindinput" class="input-text" name="message" value="{{blankInputValue}}" />
+  </view>
+  <view class="send" bindtap="sendMessage" data-content="{{inputvalue}}">发送</view>
+</view>

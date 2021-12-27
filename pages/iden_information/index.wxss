@@ -1,0 +1,95 @@
+.container {
+  padding-top: 30rpx;
+}
+.container .Item {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 94%;
+  height: 300rpx;
+  border: 1rpx solid #999;
+  margin-bottom: 30rpx;
+}
+.container .Item .img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10rpx;
+  width: 200rpx;
+  height: 260rpx;
+}
+.container .Item .img image {
+  width: 200rpx;
+  height: 260rpx;
+}
+.container .Item .infor {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 240rpx;
+  height: 260rpx;
+  width: 260rpx;
+}
+.container .Item .infor .title {
+  margin-top: 10rpx;
+  font-weight: 600;
+  /*文本不换行*/
+  white-space: nowrap;
+  /*超出范围隐藏*/
+  overflow: hidden;
+  /*文字超出用省略号*/
+  text-overflow: ellipsis;
+}
+.container .Item .infor .category {
+  margin-top: 20rpx ;
+}
+.container .Item .infor .category text {
+  color: #d45252;
+}
+.container .Item .infor .price {
+  margin-top: 20rpx;
+}
+.container .Item .infor .price .price_new {
+  color: var(--themeColor);
+  font-weight: 700;
+}
+.container .Item .infor .price .price_old {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 20rpx;
+}
+.container .Item .infor .iden .state {
+  margin-top: 20rpx;
+}
+.container .Item .infor .iden .state text {
+  font-size: 32rpx;
+}
+.container .Item .infor .iden .state .result {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #e75252;
+}
+.container .Item .cause {
+  position: absolute;
+  right: 20rpx;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.container .Item .cause ._img {
+  width: 160rpx;
+  height: 160rpx;
+}
+.container .Item .cause ._img image {
+  width: 160rpx;
+  height: 160rpx;
+}
+.container .Item .cause text {
+  display: inline-block;
+  margin-top: 20rpx;
+  color: #4d4df3;
+}
+.container .Item .icon {
+  position: absolute;
+  right: -20rpx;
+  top: -20rpx;
+}

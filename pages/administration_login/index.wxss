@@ -1,0 +1,78 @@
+/* pages/administration/index.wxss */
+button {
+  background-color: var(--themeColor);
+  color: #fff;
+}
+.container {
+  position: relative;
+}
+.container .word_des {
+  display: inline-block;
+  width: 100%;
+  height: 150rpx;
+  line-height: 150rpx;
+  text-align: center;
+  font-size: 50rpx;
+  font-weight: 700;
+}
+.container .content {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 600rpx;
+}
+.container .content .common {
+  position: relative;
+  width: 100%;
+  height: 100rpx;
+  margin: 50rpx 0;
+}
+.container .content .common .img {
+  position: absolute;
+  top: 10rpx;
+  left: 30rpx;
+  height: 70rpx;
+  width: 70rpx;
+  margin-left: 10rpx;
+}
+.container .content .common .img image {
+  width: 70rpx;
+  height: 70rpx;
+}
+.container .content .common input {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  padding-left: 15%;
+  height: 70rpx;
+  border-bottom: 1px solid #575656;
+}
+.container .content .verify {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 80rpx;
+  margin-bottom: 40rpx;
+}
+.container .content .verify input {
+  display: inline-block;
+  width: 60%;
+  height: 80rpx;
+  border: 1px solid #808080;
+  line-height: 80rpx;
+}
+.container .content .verify .verify_img {
+  vertical-align: top;
+  display: inline-block;
+  width: 39%;
+  height: 80rpx;
+  border: 1rpx solid #808080;
+}
+.container .content .verify .verify_img image {
+  width: 100%;
+  height: 80rpx;
+}

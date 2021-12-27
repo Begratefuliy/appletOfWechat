@@ -1,0 +1,47 @@
+<view class="container">
+  <view class="Item" wx:for="{{MyCheckSimGoods}}" wx:key="gid">
+    <view class="img">
+      <image src="{{item.homeImage}}"></image>
+    </view>
+    <view class="infor">
+      <view class="title">
+        <text>{{item.goodsTitle}}</text>
+      </view>
+      <view class="category">类别:
+        <text class="_content" wx:if="{{item.goodsPriceNew == 0}}">免费</text>
+        <text class="_content" wx:else>二手</text>
+      </view>
+      <view class="price">
+        <text class="price_new">￥{{item.goodsPriceNew}}</text>
+        <text class="price_old">￥{{item.goodsPriceOld}}</text>
+      </view>
+      <view class="iden">
+        <view class="state">
+          <text>状态：</text>
+          <text class="result" wx:if="{{item.state == 2}}">未通过</text>
+          <text class="result" wx:elif="{{item.state == 1}}">通过</text>
+          <text class="result" wx:else>待审核</text>
+        </view>
+      </view>
+    </view>
+    <view class="cause" wx:if="{{item.state == 1}}">
+      <view class="_img">
+        <image src="../../icons/pass.png"></image>
+      </view>
+    </view>
+     <view class="cause" wx:elif="{{item.state == 0}}">
+      <view class="_img">
+        <image src="../../icons/to_audit.png"></image>
+      </view>
+    </view>
+    <view class="cause" wx:else>
+      <view class="_img">
+        <image src="../../icons/no_pass.png"></image>
+      </view>
+      <text bindtap="look_over" data-gid="{{item.gid}}">点击查看原因></text>
+    </view>
+    <view class="icon" bindtap="delete" data-index="{{index}}" data-gid="{{item.gid}}" data-state="{{item.state}}">
+      <icon type="clear" size="23" color="red"></icon>
+    </view>
+  </view>
+</view>

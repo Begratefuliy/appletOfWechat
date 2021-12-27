@@ -1,0 +1,26 @@
+<view class="container">
+  <text class="word_des">管理员登录</text>
+  <view class="content">
+    <form bindsubmit="submit">
+      <view class="account common">
+        <view class="img">
+          <image src="../../icons/account.png"></image>
+        </view>
+        <input type="text" name="account"/>
+      </view>
+      <view class="password common">
+        <view class="img">
+          <image src="../../icons/password.png"></image>
+        </view>
+        <input type="password" name="password"/>
+      </view>
+      <!-- <view class="verify">
+        <input type="text" name="verify" placeholder="请输入验证码"/>
+        <view class="verify_img">
+          <image src="data:image/png;base64,{{verify_img.data}}"></image>
+        </view>
+      </view> -->
+      <button form-type="submit">登录</button>
+    </form>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "SearchInput": "../../component/SearchInput/SearchInput"
+  },
+  "navigationBarTitleText": "校园闲置物品信息平台"
+}

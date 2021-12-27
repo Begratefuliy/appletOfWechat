@@ -1,0 +1,24 @@
+<view class="container">
+  <text class="title">公告管理</text>
+  <form bindsubmit="submit">
+    <view class="notice_1 common">
+      <text>公告一</text>
+      <textarea name="1" cols="20" rows="5" value="{{info1}}" placeholder="公告一"></textarea>
+    </view>
+    <button form-type="submit">更新</button> 
+  </form>
+  <form bindsubmit="submit">
+    <view class="notice_2 common">
+      <text>公告二</text>
+      <textarea name="2" cols="20" rows="5" value="{{info2}}" placeholder="公告二"></textarea>
+    </view>
+    <button form-type="submit">更新</button> 
+  </form>
+  <form bindsubmit="submit">
+    <view class="notice_3 common">
+      <text>公告三</text>
+      <textarea name="3" cols="20" rows="5" value="{{info3}}" placeholder="公告三"></textarea>
+    </view>
+    <button form-type="submit">更新</button> 
+  </form>
+</view>

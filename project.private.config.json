@@ -1,0 +1,222 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/user/index",
+          "pathName": "pages/user/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "登录",
+          "pathName": "pages/login/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "个人中心",
+          "pathName": "pages/user/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "发布中心",
+          "pathName": "pages/fabu/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "发布闲置",
+          "pathName": "pages/issue_leave/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "注册",
+          "pathName": "pages/register/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "发布免费",
+          "pathName": "pages/issue_free/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "完善信息",
+          "pathName": "pages/edit_modify/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "认证中心",
+          "pathName": "pages/student_iden/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "管理员登录页面",
+          "pathName": "pages/administration_login/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "管理菜单",
+          "pathName": "pages/administration_menu/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "公告管理",
+          "pathName": "pages/administration_notice/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "审核通过",
+          "pathName": "pages/pass_audit/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "搜索",
+          "pathName": "pages/search/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "商品详情",
+          "pathName": "pages/goods_detail/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "意见反馈",
+          "pathName": "pages/feedback/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "购物车",
+          "pathName": "pages/cart/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "评论详情",
+          "pathName": "pages/comment_detail/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的发布",
+          "pathName": "pages/my_publish/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的收藏",
+          "pathName": "pages/cart/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "审核信息",
+          "pathName": "pages/iden_information/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "学生认证中心",
+          "pathName": "pages/student_iden_/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "首页",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "审核通过",
+          "pathName": "pages/pass_audit/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "未审核",
+          "pathName": "pages/unaudited/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "发布闲置",
+          "pathName": "pages/issue_leave/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "个人主页",
+          "pathName": "pages/personal_homepage/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "支付",
+          "pathName": "pages/pay/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "用户管理中心",
+          "pathName": "pages/student_iden_/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "用户详细信息",
+          "pathName": "pages/user_detail/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "私信",
+          "pathName": "pages/talk/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "信息列表",
+          "pathName": "pages/message/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "点赞详情",
+          "pathName": "pages/like/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "评论与回复",
+          "pathName": "pages/commentAndreply/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

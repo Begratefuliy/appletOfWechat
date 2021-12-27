@@ -1,0 +1,23 @@
+<view class="infoItem" wx:for="{{ AllUserSimInfo }}" wx:key="{{item.openid}}">
+  <view class="left"  bindtap="goToDetail" data-openid="{{item.openid}}">
+    <view class="img">
+      <image src="{{item.headImg}}"></image>
+      <image src="../../icons/renzheng_o.png" wx:if="{{item.state == 1}}" class="iden"></image>
+    </view>
+    <view class="user_name">
+      <text>{{item.wxname}}</text>
+    </view>
+  </view>
+  <view class="center" bindtap="goToDetail" data-openid="{{item.openid}}">
+    <view class="qq common">
+      <text>QQ：{{item.qq}}</text>
+    </view>
+    <view class="wx common">
+      <text>WX：{{item.wx}}</text>
+    </view>
+  </view>
+  <view class="right" bindtap="goToTalk" data-index="{{index}}">
+    <image src="../../icons/private_letter.png"></image>
+    <text>私信</text>
+  </view>
+</view>

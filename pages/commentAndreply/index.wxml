@@ -1,0 +1,25 @@
+<view class="container">
+  <text class="have_read" wx:if="{{allInfo.length == 0}}">暂无通知</text>
+  <text class="have_read" bindtap="Delete" wx:else>全部删除</text>
+  <view class="Item" wx:for="{{allInfo}}" wx:key="{{index}}" bindlongpress="">
+    <view class="Info" bindtap="goToUserDetail" data-openid="{{item.openid}}">
+      <view class="img">
+        <image class="headImg" src="{{item.headImg}}"></image>
+        <image class="iden" src="../../icons/renzheng_o.png"></image>
+      </view>
+      <view class="name">
+        <text>{{item.wxname}}</text>
+      </view>
+      <text class="word">评论了你的商品</text>
+    </view>
+    <view class="comment_content" bindtap="skipToDetail" data-gid="{{item.gid}}">
+      <text>{{item.content}}</text>
+    </view>
+    <view class="content" bindtap="skipToDetail" data-gid="{{item.gid}}">
+      <text>【{{item.goodsName}}】{{item.goodsTitle}}</text>
+    </view>
+    <view class="time">
+      <text>{{item.sendTime}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="Item" wx:for="{{goodSimpleInfo}}" >
+    <view class="img">
+      <image src="{{item.homeImage}}"></image>
+    </view>
+    <view class="infor" bindtap="skipToDetail" data-gid="{{item.gid}}">
+      <view class="title">
+        <text>{{item.goodsName}}</text>
+      </view>
+      <view class="des">
+        <text>{{item.goodsDec}}</text>
+      </view>
+      <view class="category">类别:
+        <text class="_content" wx:if="{{item.goodsPriceNew == 0}}">免费</text>
+        <text class="_content" wx:else>二手</text>
+      </view>
+      <view class="price">
+        <text class="price_new">￥{{item.goodsPriceNew}}</text>
+        <text class="price_old">￥{{item.goodsPriceOld}}</text>
+      </view>
+    </view>
+    <view class="check">
+      <button id="pass" type="primary" bindtap="pass" data-gid="{{item.gid}}" data-index="{{index}}" style="font-size: 30rpx;">通过</button>
+      <button id="unpass" type="warn" bindtap="unpass" data-gid="{{item.gid}}" data-index="{{index}}" style="font-size: 30rpx;">不通过</button>
+    </view>
+  </view> 
+</view>

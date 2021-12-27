@@ -1,0 +1,71 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/fabu/index",
+    "pages/goods_detail/index",
+    "pages/cart/index",
+    "pages/search/index",
+    "pages/user/index",
+    "pages/login/index",
+    "pages/issue_leave/index",
+    "pages/issue_free/index",
+    "pages/administration_login/index",
+    "pages/register/index",
+    "pages/edit_modify/index",
+    "pages/my_publish/index",
+    "pages/student_iden/index",
+    "pages/iden_information/index",
+    "pages/feedback/index",
+    "pages/administration_menu/index",
+    "pages/pass_audit/index",
+    "pages/unaudited/index",
+    "pages/student_iden_/index",
+    "pages/administration_notice/index",
+    "pages/comment_detail/index",
+    "pages/goods_detail_other/index",
+    "pages/personal_homepage/index",
+    "pages/user_detail/index",
+    "pages/talk/index",
+    "pages/message/index",
+    "pages/like/index",
+    "pages/commentAndreply/index",
+    "pages/pay/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#eb4450",
+    "navigationBarTitleText": "西邮二手交易信息",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#ff2b4a",
+    "backgroundColor": "#fafafa",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icons/shouye.png",
+        "selectedIconPath": "icons/shouye_o.png"
+      },
+      {
+        "pagePath": "pages/fabu/index",
+        "text": "发布",
+        "iconPath": "icons/fabu.png",
+        "selectedIconPath": "icons/fabu_o.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的",
+        "iconPath": "icons/wode.png",
+        "selectedIconPath": "icons/wode_o.png"
+      }
+    ]
+  },
+  
+    
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

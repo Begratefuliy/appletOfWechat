@@ -1,0 +1,82 @@
+<!--index.wxml-->
+<view class="pyg_index">
+  <!-- 搜索开始 -->
+  <SearchInput>搜索</SearchInput>
+  <!-- 搜索结束 -->
+  <!-- 轮播图开始 -->
+  <view class="index_swiper">
+    <swiper autoplay indicator circular>
+      <swiper-item wx:for="{{swiperList}}" wx:key="id">
+        <navigator>
+          <image src="{{item}}" />
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 轮播图结束 -->
+  <!-- 热门话题开始 -->
+  <view class="hot_topic">
+    <view class="title">
+      <text class="_title">|</text>
+      <text>热门话题</text>
+    </view>
+    <view class="container">
+      <view class="content">
+        <text>{{Info.Info1.noticeInfo}}</text>
+        <text>{{Info.Info2.noticeInfo}}</text>
+        <text>{{Info.Info3.noticeInfo}}</text>
+        <text>{{Info.Info1.noticeInfo}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 热门话题结束 -->
+  <!-- 商品展览开始 -->
+  <view class="goods_exhibition">
+    <view class="goods-tab">
+      <view class="tab-bar {{currentIndex==0 ? 'on' : ''}}" data-current="0" bindtap="switchBar">跳骚专区</view>
+      <view class="tab-bar {{currentIndex==1 ? 'on' : ''}}" data-current="1" bindtap="switchBar">免费专区</view>
+    </view>
+    <view class="goods_content">
+      <view class="search_content">
+        <view class="search_Item" wx:for="{{goodSimpleInfo}}" wx:key="item.gid" data-gid="{{item.gid}}" bindtap="skipToDetail" wx:if="{{currentIndex == 0}}">
+          <view class="img">
+            <image src="{{item.homeImage}}" lazy-load></image>
+          </view>
+          <view class="product_des">
+            <text class="title">【{{item.goodsName}}】{{item.goodsTitle}}</text>
+            <text class="description">{{item.goodsDec}}</text>
+          </view>
+          <view class="price">
+            <text class="price_new">￥{{item.goodsPriceNew}}</text>
+            <text class="price_old">￥{{item.goodsPriceOld}}</text>
+          </view>
+          <view class="category">类别:
+            <text class="_content" wx:if="{{item.goodsPriceNew == 0}}">免费</text>
+            <text class="_content" wx:else>二手</text>
+          </view>
+        </view>
+        <view class="search_Item" wx:for="{{goodFreeInfo}}" wx:key="item.gid" data-gid="{{item.gid}}" bindtap="skipToDetail" wx:if="{{ currentIndex == 1}}">
+          <view class="img">
+            <image src="{{item.homeImage}}" lazy-load></image>
+          </view>
+          <view class="product_des">
+            <text class="title">【{{item.goodsName}}】{{item.goodsTitle}}</text>
+            <text class="description">{{item.goodsDec}}</text>
+          </view>
+          <view class="price">
+            <text class="price_new">￥{{item.goodsPriceNew}}</text>
+            <text class="price_old">￥{{item.goodsPriceOld}}</text>
+          </view>
+          <view class="category">类别:
+            <text class="_content" wx:if="{{item.goodsPriceNew == 0}}">免费</text>
+            <text class="_content" wx:else>二手</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 商品展览结束 -->
+</view>
+<button open-type="contact" bindcontact="handleContact" id="service">
+  <image src="../../icons/contact.png"></image>
+</button>

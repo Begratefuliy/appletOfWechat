@@ -1,0 +1,20 @@
+<view>
+    <view class="box1">
+        <view class="pinglun" bindtap="goToComment">
+            <view class="iconfont icon-pinglun pic1"></view>
+            <text>评论和回复</text>
+        </view>
+        <view class="dianzan" bindtap="goToLike">
+            <view class="iconfont icon-dianzan pic2"></view>
+            <text>点赞</text>
+        </view>
+    </view>
+    <view class="message" wx:for="{{listInfo}}" wx:key="index">
+        <image class="avatar" src="{{item.fromHeadimage}}"></image>
+            <view class="user-message" data-index="{{index}}" catchtap="goToTalk" bindlongtap="delete" bindtouchstart="touchStart" bindtouchend="touchEnd" data-fromOpenid="{{item.fromOpenid}}">
+                <view class="name">{{item.fromName}}</view>
+                <view class="time">{{item.sendTime}}</view>
+                <view class="particulars">{{item.lastContext}}</view>
+            </view>
+    </view>
+</view>

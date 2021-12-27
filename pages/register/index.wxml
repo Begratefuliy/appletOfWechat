@@ -1,0 +1,23 @@
+<view class="register">
+  <form bindsubmit="submit">
+    <view class="reg_name _common">
+      <view class="word">
+        <text class="red">*</text><text>真实姓名</text>
+      </view>
+      <input type="text" name="name" placeholder="以下信息不可修改，请认真填写" />
+    </view>
+    <view class="reg_qq _common">
+      <view class="word">
+        <text class="red">*</text><text>QQ</text>
+      </view>
+      <input type="number" name="qq" placeholder="请输入" />
+    </view>
+    <view class="reg_wx _common">
+      <view class="word">
+        <text class="red">*</text><text>微信</text>
+      </view>
+      <input type="text" name="wx" placeholder="请输入" />
+    </view>
+    <button form-type="submit" bindtap="information_submit">注册</button>
+  </form>
+</view>

@@ -1,0 +1,129 @@
+<view class="container">
+  <view class="swiper">
+    <swiper autoplay indicator circular>
+      <swiper-item wx:for="{{goodsDetail.imageUrl}}" wx:key="id" bindtap="handlePreviewImage" data-url="{{item}}">
+        <image mode="aspectFit" src="{{item}}" />
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="product_infor">
+    <view class="price">
+      <text class="price_new">￥{{goodsDetail.goodsPriceNew}}</text>
+      <text class="price_old">￥{{goodsDetail.goodsPriceOld}}</text>
+    </view>
+    <view class="product_date">
+      <text>发布日期：</text>
+      <text class="date">{{goodsDetail.issueTime}}</text>
+    </view>
+    <view class="product_des">
+      <text class="title">【{{goodsDetail.goodsName}}】{{goodsDetail.goodsTitle}}</text>
+      <text class="description">{{goodsDetail.goodsDec}}</text>
+    </view>
+    <view class="product_school">
+      <text>学校：</text>
+      <text>{{goodsDetail.goodsXueyuan}}</text>
+      <image src="../../icons/renzheng_o.png" wx:if="{{goodsDetail.imageCheckStatus == 1}}"></image>
+    </view>
+    <view class="page_view">
+      <text>浏览量：{{goodsDetail.openSum}}</text>
+    </view>
+    <view class="product_publish">
+      <text wx:if="{{goodsDetail.imageCheckStatus == 1}}">此商品由已认证用户</text>
+      <text wx:else>此商品由用户</text>
+      <text class="publish_name" bindtap="goToUserDetail" data-openid="{{goodsDetail.openid}}">{{goodsDetail.wxname}}</text>
+      <text>发布</text>
+    </view>
+  </view>
+  <view class="comment_content">
+    <view class="title">
+      <text>留言评论：{{allMainCommentInfo.length}}</text>
+    </view>
+    <view class="comment_item" wx:for="{{allMainCommentInfo}}" wx:key="inId">
+      <view class="comment_infor">
+        <view class="img" bindtap="goToUserDetail" data-openid="{{item.fromOpenid}}">
+          <image class="user_img" src="{{item.fromAvatar}}"></image>
+          <image class="iden_img" src="../../icons/renzheng_o.png" wx:if="{{item.userState == 1}}"></image>
+        </view>
+        <view class="comment_name">
+          <text>{{item.formName}}</text>
+        </view>
+        <view class="comment_time">
+          <text>{{item.createTime}}</text>
+        </view>
+      </view>
+      <view class="main_comment">
+        <view class="content">
+          <text>{{item.content}}</text>
+        </view>
+        <view class="comment_icon">
+          <view class="like" bindtap="comment_like" data-index="{{index}}">
+            <image src="../../icons/unlike.png" wx:if="{{item.likeState == 0}}"></image>
+            <image src="../../icons/like.png" wx:else></image>
+            <text>{{item.likeNum}}</text>
+          </view>
+          <view class="comment_reply" data-openid="{{item.fromOpenid}}" data-id="{{item.inId}}" data-index="{{index}}" bindtap="main_comment_reply">
+            <image src="../../icons/reply.png"></image>
+            <text>回复</text>
+          </view>
+        </view>
+      </view>
+      <view class="vice_comment" wx:if="{{item.commentsReplies.length != 1 }}" data-id="{{item.inId}}"
+        bindtap="toCommentDetail">
+        <view class="vice_comment_itme" wx:for="{{item.commentsReplies}}" wx:key="{{item.rid}}" wx:if="{{item.commentId != null}}">
+          <view class="float" align="center">
+            <view class="comment_name">
+              <text>{{item.fromName}}</text>
+            </view>
+            <view class="by_comment" wx:if="{{item.toOpenid != null}}">
+              <text>回复</text>
+              <text class="name">{{item.toName}}</text>
+            </view>
+          </view>
+          <text class="comment_reply">{{item.content}}</text>
+        </view>
+        <view class="more" bindtap="toCommentDetail" wx:if="{{item.sonSums > 3}}" data-id="{{item.inId}}">
+          <text>共{{item.sonSums}}条回复></text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="comment_input" wx:if="{{isShowInput == 1}}">
+  <form bindsubmit="submit_main">
+    <textarea type="text" placeholder="请输入评论内容" auto-focus="true" bindblur="hideInput"
+      bindfocus="getHeight" name="comment" confirm-hold="true" show-confirm-bar="{{false}}" style="overflow:hidden"></textarea>
+    <button size="mini" form-type="submit">发布</button>
+  </form>
+</view>
+<view class="comment_input" wx:if="{{isShowInput == 2}}">
+  <form bindsubmit="submit_vice">
+    <textarea type="text" placeholder="请输入回复内容" auto-focus="true" bindblur="hideInput"
+      bindfocus="getHeight" name="comment" confirm-hold="true" show-confirm-bar="{{false}}" style="overflow:hidden"></textarea>
+    <button size="mini" form-type="submit">发布</button>
+  </form>
+</view>
+<view class="navigation" wx:if="{{isShowInput == 0}}">
+  <view class="collect common" bindtap="handleCollect">
+    <view class="img">
+      <image src="../../icons/collect.png" wx:if="{{!isCollect}}"></image>
+      <image src="../../icons/collect_o.png" wx:else></image>
+    </view>
+    <text>收藏</text>
+  </view>
+  <view class="comment common" bindtap="showInput">
+    <view class="img">
+      <image src="../../icons/comment.png"></image>
+    </view>
+    <text>评论</text>
+  </view>
+  <view class="share common">
+    <view class="img">
+      <image src="../../icons/share.png"></image>
+    </view>
+    <button open-type="share" size="mini">分享</button>
+  </view>
+  <view class="relation" bindtap="relation">
+    <text>联系卖家</text>
+  </view>
+
+</view>

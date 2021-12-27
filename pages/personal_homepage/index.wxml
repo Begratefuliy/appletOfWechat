@@ -1,0 +1,48 @@
+<view class="container">
+  <image class="user_bg" src="{{userInfo.headImg}}"></image>
+  <view class="info">
+    <view class="left">
+      <view class="img">
+        <image src="{{userInfo.headImg}}"></image>
+        <image src="../../icons/renzheng_o.png" class="iden" wx:if="{{userInfo.state != 0}}"></image>
+      </view>
+      <view class="user_name">
+        <text>{{userInfo.wxname}}</text>
+      </view>
+    </view>
+    <view class="center">
+      <view class="qq common">
+        <text>QQ：{{userInfo.qq}}</text>
+      </view>
+      <view class="wx common">
+        <text>WX：{{userInfo.wx}}</text>
+      </view>
+    </view>
+    <view class="right" bindtap="goToTalk">
+      <image src="../../icons/private_letter.png"></image>
+      <text>私信</text>
+    </view>
+  </view>
+  <view class="publish_product">
+    <text class="publish_word">所有发布商品{{publish_product.length}}件</text>
+    <view class="content">
+      <view class="Item" wx:for="{{publish_product}}" wx:key="{{item.gid}}" data-gid="{{item.gid}}" bindtap="skipToDetail">
+        <view class="img">
+          <image src="{{item.homeImage}}"></image>
+        </view>
+        <view class="product_des">
+          <text class="title">【{{item.goodsName}}】{{item.goodsTitle}}</text>
+          <text class="description">{{item.goodsDec}}</text>
+        </view>
+        <view class="price">
+          <text class="price_new">￥{{item.goodsPriceNew}}</text>
+          <text class="price_old">￥{{item.goodsPriceOld}}</text>
+        </view>
+        <view class="category">类别:
+          <text class="_content" wx:if="{{item.goodsPriceNew == 0}}">免费</text>
+          <text class="_content" wx:else>二手</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

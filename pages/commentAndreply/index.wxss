@@ -1,0 +1,88 @@
+.container {
+  width: 100%;
+}
+.container .have_read {
+  display: inline-block;
+  width: 100%;
+  height: 70rpx;
+  padding-left: 15rpx;
+  line-height: 70rpx;
+  color: red;
+  border-top: 1rpx solid #999;
+  border-bottom: 1rpx solid #999;
+}
+.container .Item {
+  position: relative;
+  width: 100%;
+  height: 230rpx;
+  margin-bottom: 5rpx;
+}
+.container .Item .Info {
+  width: 100%;
+  height: 100rpx;
+}
+.container .Item .Info .img {
+  position: relative;
+  display: inline-block;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  border: 1rpx solid #999;
+  vertical-align: top;
+  margin-left: 20rpx;
+}
+.container .Item .Info .img .headImg {
+  width: 100%;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.container .Item .Info .img .iden {
+  position: absolute;
+  bottom: -10rpx;
+  right: -8rpx;
+  width: 25rpx;
+  height: 25rpx;
+}
+.container .Item .Info .name {
+  display: inline-block;
+  margin-left: 20rpx;
+  vertical-align: top;
+  margin-right: 10rpx;
+}
+.container .Item .Info .name text {
+  display: inline-block;
+  max-width: 200rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.container .Item .Info .word {
+  color: #757575;
+}
+.container .Item .comment_content {
+  position: absolute;
+  left: 120rpx;
+  top: 50rpx;
+  width: 80%;
+  height: 50rpx;
+}
+.container .Item .comment_content text {
+  line-height: 50rpx;
+  font-size: 30rpx;
+}
+.container .Item .content {
+  position: absolute;
+  left: 120rpx;
+  top: 100rpx;
+  width: 80%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-weight: 600;
+  background-color: #d3d2d2;
+}
+.container .Item .time {
+  position: absolute;
+  bottom: 0;
+  left: 10rpx;
+  color: #757575;
+}

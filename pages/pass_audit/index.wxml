@@ -1,0 +1,24 @@
+<view class="search_content">
+  <view class="search_Item" wx:for="{{goodSimpleInfo}}" wx:key="{{item.gid}}">
+    <view class="img">
+      <image src="{{item.homeImage}}" lazy-load="true"></image>
+    </view>
+    <view bindtap="skipToDetail" data-gid="{{item.gid}}">
+      <view class="product_des">
+      <text class="title">【{{item.goodsName}}】{{item.goodsTitle}}</text>
+      <text class="description">{{item.goodsDec}}</text>
+    </view>
+    <view class="price">
+      <text class="price_new">￥{{item.goodsPriceNew}}</text>
+      <text class="price_old">￥{{item.goodsPriceOld}}</text>
+    </view>
+    <view class="category">类别:
+      <text class="_content" wx:if="{{item.goodsPriceNew == 0}}">免费</text>
+      <text class="_content" wx:else>二手</text>
+    </view>
+    </view>
+    <view class="icon" bindtap="delete" data-index="{{index}}" data-gid="{{item.gid}}">
+      <icon type="clear" size="23" color="red"></icon>
+    </view>
+  </view>
+</view>

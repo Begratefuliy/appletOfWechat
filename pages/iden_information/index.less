@@ -1,0 +1,98 @@
+.container{
+    padding-top: 30rpx;
+    .Item{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 94%;
+        height: 300rpx;
+        border: 1rpx solid #999;
+        margin-bottom: 30rpx;
+        .img{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10rpx;
+            width: 200rpx;
+            height: 260rpx;
+            image{
+                width: 200rpx;
+                height: 260rpx;
+            }
+        }
+        .infor{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 240rpx;
+            height: 260rpx;
+            width: 260rpx;
+            .title{
+                margin-top: 10rpx;
+                font-weight: 600;
+                /*文本不换行*/
+                white-space: nowrap;
+                /*超出范围隐藏*/
+                overflow: hidden;
+                /*文字超出用省略号*/
+                text-overflow: ellipsis
+            }
+            .category{
+                margin-top: 20rpx ;
+                text{
+                    color: rgb(212, 82, 82);
+                }
+            }
+            .price{
+                margin-top: 20rpx;
+                .price_new{
+                    color: var(--themeColor);
+                    font-weight: 700;
+                }
+                .price_old{
+                    text-decoration: line-through;
+                    color: #999;
+                    font-size: 20rpx;
+                }
+            }
+            .iden{
+                .state{
+                    margin-top: 20rpx;
+                    text{
+                        font-size: 32rpx;
+                    }
+                    .result{
+                        font-size: 36rpx;
+                        font-weight: 600;
+                        color: rgb(231, 82, 82);
+                    }
+                }
+            }
+        }
+        .cause{
+            position: absolute;
+            right: 20rpx;
+            top: 50%;
+            transform: translateY(-50%);
+            ._img{
+                width: 160rpx;
+                height: 160rpx;
+                image{
+                    width: 160rpx;
+                    height: 160rpx;
+                }
+            }
+            text{
+                display: inline-block;
+                margin-top: 20rpx;
+                color: rgb(77, 77, 243);
+            }
+
+        }
+        .icon{
+            position: absolute;
+            right: -20rpx;
+            top: -20rpx;
+        }
+    }
+}

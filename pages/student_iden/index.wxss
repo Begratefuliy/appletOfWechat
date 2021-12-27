@@ -1,0 +1,72 @@
+button {
+  margin: 40rpx;
+  background-color: var(--themeColor);
+  color: #fff;
+}
+.student_iden ._word {
+  display: inline-block;
+  width: 100%;
+  height: 150rpx;
+  line-height: 150rpx;
+  text-align: center;
+  font-size: 60rpx;
+  font-weight: 700;
+}
+.student_iden .showCamera .figure {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: space-around;
+  width: 100%;
+  height: 150rpx;
+  border: 1rpx solid #999;
+}
+.student_iden .showCamera .figure .word {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 150rpx;
+  transform: translateY(-50%);
+  margin-left: 10rpx;
+}
+.student_iden .showCamera .figure .word .red {
+  color: red;
+  margin-right: 10rpx;
+}
+.student_iden .showCamera .figure .word text {
+  font-size: 30rpx;
+  color: #5c5b5b;
+}
+.student_iden .showCamera .figure .icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20rpx;
+  display: inline-block;
+  width: 120rpx;
+  height: 120rpx;
+  border: 2rpx dashed #999;
+  text-align: center;
+}
+.student_iden .showCamera .figure .icon image {
+  width: 100rpx;
+  height: 100rpx;
+}
+.student_iden .show_content {
+  position: relative;
+  margin: 20rpx auto;
+  width: 90%;
+  height: 400rpx;
+  border: 1px dashed #999;
+  display: flex;
+  justify-content: space-around;
+}
+.student_iden .show_content .show_img {
+  width: 46%;
+  height: 350rpx;
+  margin-top: 20rpx;
+}
+.student_iden .show_content .show_img image {
+  width: 100%;
+  height: 350rpx;
+}

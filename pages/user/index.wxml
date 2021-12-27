@@ -1,0 +1,81 @@
+<!--pages/user/index.wxml-->
+<view class="user_info_wrap">
+  <view wx:if="{{userInfo.avatarUrl}}" class="user_img_wrap">
+    <image class="user_bg" src="{{userInfo.avatarUrl}}"></image>
+    <view class="user_info">
+      <image class="user_icon" src="{{userInfo.avatarUrl}}"></image>
+      <view class="user_name">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <view wx:else class="user_btn">
+    <navigator url="/pages/login/index"> 登录 </navigator>
+  </view>
+</view>
+<view class="user_content">
+  <view class="user_main">
+    <view class="edit-information user_common" bindtap="goToEdit">
+      <view class="iconfont_left">
+        <image src="../../icons/editor.png"></image>
+      </view>
+      <text>完善信息</text>
+      <view class="iconfont_right">
+        <image src="../../icons/arrow-right.png"></image>
+      </view>
+    </view>
+    <view class="my-publish user_common" bindtap="goToMyPublish">
+      <view class="iconfont_left">
+        <image src="../../icons/leave.png"></image>
+      </view>
+      <text>我的发布</text>
+      <view class="iconfont_right">
+        <image src="../../icons/arrow-right.png"></image>
+      </view>
+    </view>
+    <view class="pass_audit user_common" bindtap="goToPassAudit">
+      <view class="iconfont_left">
+        <image src="../../icons/guanyu.png"></image>
+      </view>
+      <text>审核信息</text>
+      <view class="iconfont_right">
+        <image src="../../icons/arrow-right.png"></image>
+      </view>
+    </view>
+    <view class="my-collect user_common" bindtap="goToMyCollect">
+      <view class="iconfont_left">
+        <image src="../../icons/Star.png"></image>
+      </view>
+      <text>我的收藏</text>
+      <view class="iconfont_right">
+        <image src="../../icons/arrow-right.png"></image>
+      </view>
+    </view>
+    <view class="message user_common" bindtap="goToMessage">
+      <view class="iconfont_left">
+        <image src="../../icons/xinxi.png"></image>
+      </view>
+      <text>信息列表</text>
+      <view class="iconfont_right">
+        <image src="../../icons/arrow-right.png"></image>
+      </view>
+    </view>
+    <view class="student-iden user_common" bindtap="goToStudentIden">
+      <view class="iconfont_left">
+        <image src="../../icons/iden.png"></image>
+      </view>
+      <text>认证中心</text>
+      <view class="iconfont_right">
+        <image src="../../icons/arrow-right.png"></image>
+      </view>
+    </view>
+    <view class="idea_feedback" bindtap="goToIdeaFeedback">
+      <view class="iconfont_left">
+        <image src="../../icons/idea.png"></image>
+      </view>
+      <text>意见反馈</text>
+      <view class="iconfont_right">
+        <image src="../../icons/arrow-right.png"></image>
+      </view>
+    </view>
+
+  </view>
+</view>

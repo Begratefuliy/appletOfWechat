@@ -1,0 +1,41 @@
+<view class="container">
+  <view class="common _name">
+    <view class="word">
+      <text class="red">*</text><text>真实姓名</text>
+    </view>
+    <input type="text" value="{{userInfo.uname}}"/>
+  </view>
+  <view class="common">
+    <view class="word">
+      <text class="red">*</text><text>微信名称</text>
+    </view>
+    <input type="text" value="{{userInfo.wxname}}"/>
+  </view>
+  <view class="common">
+    <view class="word">
+      <text class="red">*</text><text>QQ</text>
+    </view>
+    <input type="digit" value="{{userInfo.qq}}"/>
+  </view>
+  <view class="common">
+    <view class="word">
+      <text class="red">*</text><text>WX</text>
+    </view>
+    <input type="digit" value="{{userInfo.wx}}"/>
+  </view>
+  <view class="student_iden">
+    <view class="word">
+      <text class="red">*</text><text>学生证附图：</text>
+    </view>
+    <view class="picture">
+      <view wx:for="{{userInfo.image}}" wx:key="{{index}}">
+        <image src="{{item.imageUrl}}"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<button type="primary" wx:if="{{userInfo.state == 1}}">已认证</button>
+<button wx:if="{{userInfo.state == 10}}">用户已被拉黑</button>
+<button type="primary" bindtap="pass" wx:if="{{userInfo.state != 1 && userInfo.state != 10}}">认证通过</button>
+<button bindtap="unpass" wx:if="{{userInfo.state != 1 && userInfo.state != 10}}">认证不通过</button>
+<button bindtap="block" wx:if="{{userInfo.state != 10}}">拉黑</button>

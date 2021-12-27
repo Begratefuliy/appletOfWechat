@@ -1,0 +1,19 @@
+<view class="student_iden">
+  <text class="_word">学生认证</text>
+  <view class="showCamera">
+    <view class="figure" bindtap="gotoShow">
+      <view class="icon">
+        <image src="../../icons/camera.png"></image>
+      </view>
+      <view class="word">
+        <text class="red">*</text><text>点击上传学生证照片</text>
+      </view>
+    </view>
+    <view class="show_content">
+      <view class="show_img" wx:for="{{src}}" wx:key="scr">
+        <image mode="aspectFitf" src="{{src[index]}}"></image>
+      </view>
+    </view>
+  </view>
+  <button form-type="submit" bindtap="student_submit">提交</button>
+</view>

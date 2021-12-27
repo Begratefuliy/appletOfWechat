@@ -1,0 +1,35 @@
+<view class="container">
+  <navigator url="/pages/pass_audit/index">
+    <view class="pass_audit common">
+      <view class="img">
+        <image src="../../icons/pass_audit.png"></image>
+      </view>
+      <text>审核通过</text>
+    </view>
+  </navigator>
+  <navigator url="/pages/unaudited/index">
+    <view class="unaudited common">
+      <view class="img">
+        <image src="../../icons/unaudited.png"></image>
+      </view>
+      <text>未审核</text>
+    </view>
+  </navigator>
+  <navigator url="/pages/student_iden_/index">
+    <view class="student_iden common">
+      <view class="img">
+        <image src="../../icons/student_iden.png"></image>
+      </view>
+      <text>用户管理</text>
+    </view>
+  </navigator>
+  <navigator url="/pages/administration_notice/index">
+    <view class="administration_notice common">
+      <view class="img">
+        <image src="../../icons/administration_notice.png"></image>
+      </view>
+      <text>公告管理</text>
+    </view>
+  </navigator>
+</view>
+<text class="word">----西邮二手信息交易平台----</text>
